@@ -72,10 +72,12 @@ class Node {
         bool insertNotFull(Node * &pos, unsigned int newKey){
             int i = pos->getDegree();
             if(pos->isLeaft()){
-                while(i > 0 && newKey < pos->getKeys()[i])
-                   i--;
-
+                pos->getKeys().push_back(newKey);
+                sort(pos->getKeys().begin(), pos->getKeys().end());
             }
+            while(i > 0 && newKey < pos->getKeys()[i])
+                i--;
+            i++;
 
         }
 
