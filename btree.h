@@ -12,8 +12,8 @@ class BTree {
     public:
         BTree(unsigned int degree) : degree(degree), root(nullptr) {};
 
-        T search(int k) { 
-            // TODO
+        T search(int k) {
+
         } 
 
         bool insert(int k, T data) {
@@ -28,7 +28,9 @@ class BTree {
             // TODO
         }
 
-        ~BTree();
+        ~BTree(){
+
+        };
 };
 
 #endif
